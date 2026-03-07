@@ -1,5 +1,5 @@
 ---
-name: Don Norman UX Rules for Agentic Systems
+name: ux-rules-don
 description: Applies Don Norman’s human-centered design principles to evaluate or generate user interfaces. Ensures visibility of actions, clear feedback, natural mappings, error prevention, and minimal cognitive load.
 ---
 
