@@ -7,6 +7,25 @@ description: Create or upgrade a production-minded full-stack project scaffold w
 
 Build a runnable foundation, not a pile of placeholder files. Preserve the user's product choices and adapt to an existing repository instead of replacing its conventions.
 
+## Quick-start checklist
+
+Use this checklist before creating files:
+
+1. Inspect the repository for its package manager, runtimes, lockfiles, workspace layout, and existing API conventions.
+2. Is this an established application? Keep its layout and backend unless the user explicitly asks to migrate it. Is it greenfield? Continue below.
+3. Did the user name a backend language? Use it. Otherwise choose TypeScript and say why; select Fastify when no existing framework is preferred.
+4. Do the web app and API live in one repository? Use a workspace layout such as `apps/web` and `apps/api`; otherwise keep each project's native layout and share the contract through a published/generated boundary.
+5. Identify one end-to-end user-visible slice, its versioned API route, its OpenAPI schema, and its browser test before adding optional infrastructure.
+6. Choose the telemetry transport: same-origin collector by default, a server-side vendor adapter where available, or an explicitly configured browser SDK only after reviewing privacy, CSP, CORS, and key exposure.
+
+## When not to use this skill
+
+Do not use this skill for:
+
+- a frontend-only component, page, style, or interaction change with no backend contract;
+- a small, isolated change in an established application that does not need a baseline/tooling migration;
+- a disposable prototype where the requester explicitly values speed over the contract, observability, and test baseline this skill establishes.
+
 ## Resolve the shape
 
 Inspect the workspace first. Determine the package manager, runtime/tool versions, existing conventions, and whether the directory is greenfield.
@@ -17,6 +36,7 @@ Inspect the workspace first. Determine the package manager, runtime/tool version
 - Keep infrastructure proportional to the requested project. A scaffold may expose extension points without provisioning unrequested databases, queues, cloud services, or telemetry vendors.
 
 Read [references/baseline.md](references/baseline.md) for the required architecture, observability, contracts, and test baseline. Read [references/backends.md](references/backends.md) only for the selected backend language.
+Read [references/telemetry.md](references/telemetry.md) when selecting or configuring telemetry. For a compact TypeScript/Fastify/Vite reference, see [examples/minimal-fastify-vite](examples/minimal-fastify-vite/README.md).
 
 ## Implement an end-to-end slice
 
