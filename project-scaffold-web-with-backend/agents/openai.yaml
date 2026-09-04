@@ -1,0 +1,4 @@
+interface:
+  display_name: "Web Project Scaffold with Backend"
+  short_description: "Create observable, typed full-stack starters"
+  default_prompt: "Use $project-scaffold-web-with-backend to create a production-minded web project with a backend."
