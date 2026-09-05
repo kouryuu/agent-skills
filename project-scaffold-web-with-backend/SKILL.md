@@ -36,7 +36,7 @@ Inspect the workspace first. Determine the package manager, runtime/tool version
 - Keep infrastructure proportional to the requested project. A scaffold may expose extension points without provisioning unrequested databases, queues, cloud services, or telemetry vendors.
 
 Read [references/baseline.md](references/baseline.md) for the required architecture, observability, contracts, and test baseline. Read [references/backends.md](references/backends.md) only for the selected backend language.
-Read [references/telemetry.md](references/telemetry.md) when selecting or configuring telemetry. For a compact TypeScript/Fastify/Vite reference, see [examples/minimal-fastify-vite](examples/minimal-fastify-vite/README.md).
+Read [references/telemetry.md](references/telemetry.md) when selecting or configuring telemetry.
 
 ## Implement an end-to-end slice
 
